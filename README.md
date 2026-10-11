@@ -11,7 +11,7 @@
 ## Notes
 - Built with semantic HTML5 and a shared external stylesheet.
 - Includes responsive behaviors via media queries and dark mode via `prefers-color-scheme`.
-- The home page transitions between locally stored photographs as you scroll; a volleyball-and-sakura entrance animation plays on page load.
+- The home page transitions between locally stored photographs as you scroll; a volleyball-panel ball and sakura-petal entrance animation plays on page load.
 - Photographs are sourced from Wikimedia Commons; creators, source pages, and Creative Commons licenses are listed below.
 - Tested at 375px (mobile), 768px (tablet), and 1280px (desktop) after local browser checks.
 

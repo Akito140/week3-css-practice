@@ -21,6 +21,7 @@ if (sections.length && layers.length) {
     layers.forEach((layer) => {
       layer.classList.toggle("is-visible", layer.classList.contains(`scene-layer--${currentSection.dataset.scene}`));
     });
+    document.body.classList.toggle("scene-volleyball", currentSection.dataset.scene === "volleyball");
     scheduled = false;
   };
 
