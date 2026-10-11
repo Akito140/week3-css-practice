@@ -6,8 +6,14 @@
   <meta name="description" content="Alisher Tursunbekov's accessible, responsive solutions to 15 CSS practice exercises.">
   <title>Week 3 CSS Practice | Alisher Tursunbekov</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/scenes.js" defer></script>
 </head>
 <body>
+  <div class="scene-backdrop" aria-hidden="true">
+    <img class="scene-layer scene-layer--fuji is-visible" src="assets/images/fuji-sakura.jpg" alt="">
+    <img class="scene-layer scene-layer--volleyball" src="assets/images/volleyball-match.jpg" alt="">
+    <img class="scene-layer scene-layer--stars" src="assets/images/milky-way.jpg" alt="">
+  </div>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
@@ -35,7 +41,7 @@
     </section>
 
     <div class="exercise-catalog">
-      <section class="exercise-group" id="beginner" aria-labelledby="beginner-title">
+      <section class="exercise-group" id="beginner" data-scene="fuji" aria-labelledby="beginner-title">
         <div class="group-heading"><p class="eyebrow">01 — Start here</p><h2 id="beginner-title">Beginner</h2><p>Set the visual foundations: readable type, clear surfaces, and useful states.</p></div>
         <div class="exercise-grid">
           <article class="exercise-card"><span class="exercise-number">01</span><h3>Type &amp; color</h3><p>Build a clear typographic hierarchy with a restrained palette.</p><a href="beginner/ex1.html">View solution <span aria-hidden="true">↗</span></a></article>
@@ -46,7 +52,7 @@
         </div>
       </section>
 
-      <section class="exercise-group" id="intermediate" aria-labelledby="intermediate-title">
+      <section class="exercise-group" id="intermediate" data-scene="volleyball" aria-labelledby="intermediate-title">
         <div class="group-heading"><p class="eyebrow">02 — Arrange</p><h2 id="intermediate-title">Intermediate</h2><p>Choose the right layout tool and make the arrangement adapt to its space.</p></div>
         <div class="exercise-grid">
           <article class="exercise-card"><span class="exercise-number">06</span><h3>Display modes</h3><p>Compare block, inline, and inline-block behavior side by side.</p><a href="intermediate/ex6.html">View solution <span aria-hidden="true">↗</span></a></article>
@@ -57,7 +63,7 @@
         </div>
       </section>
 
-      <section class="exercise-group" id="challenging" aria-labelledby="challenging-title">
+      <section class="exercise-group" id="challenging" data-scene="stars" aria-labelledby="challenging-title">
         <div class="group-heading"><p class="eyebrow">03 — Refine</p><h2 id="challenging-title">Challenging</h2><p>Add expressive details, robust components, and a complete page composition.</p></div>
         <div class="exercise-grid">
           <article class="exercise-card"><span class="exercise-number">11</span><h3>Pseudo-elements</h3><p>Add a decorative marker and an accessible visual cue in CSS.</p><a href="challenging/ex11.html">View solution <span aria-hidden="true">↗</span></a></article>
