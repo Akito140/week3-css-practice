@@ -18,5 +18,5 @@
 Open `index.html` in a web browser and navigate via the Home page.
 
 ## Publishing
-GitHub Pages / Netlify URL: not published yet. Publish the `week3-css-practice` folder as a static site and add its URL here.
+GitHub Pages: https://akito140.github.io/week3-css-practice/
 Repository URL: https://github.com/Akito140/week3-css-practice
