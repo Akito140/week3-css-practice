@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exercise 12: style a form with explicit labels, usable controls, and visible focus states.">
+  <title>Exercise 12: Form Styling | Week 3 CSS Practice</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="site-mark" href="../index.html">W3<span>.</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../index.html#beginner">Beginner</a><a href="../index.html#intermediate">Intermediate</a><a href="../index.html#challenging">Challenging</a></nav></div></header>
+  <main id="main-content">
+    <header class="page-heading"><a class="back-link" href="../index.html#challenging">← All challenging exercises</a><p class="eyebrow">Challenging · Exercise 12</p><h1>Form styling</h1><p>Explicit labels make fields understandable to assistive technology and easier to activate. Native required and email validation work alongside clear keyboard focus styles.</p></header>
+    <article class="exercise-article" aria-labelledby="result-title">
+      <section aria-labelledby="result-title"><h2 id="result-title">Live result</h2><div class="demo-panel"><p class="demo-label">All fields have visible labels and are keyboard accessible</p><form class="ex12-form" action="#" method="get"><div><label for="ex12-email">Email address</label><input id="ex12-email" name="email" type="email" autocomplete="email" required></div><div><label for="ex12-message">Message</label><textarea id="ex12-message" name="message" required></textarea></div><button type="submit">Send message</button></form></div></section>
+      <section aria-labelledby="code-title"><h2 id="code-title">Solution markup</h2><pre class="code-panel"><code>&lt;form class="ex12-form" action="#" method="get"&gt;
+  &lt;div&gt;
+    &lt;label for="email"&gt;Email address&lt;/label&gt;
+    &lt;input id="email" name="email" type="email" required&gt;
+  &lt;/div&gt;
+  &lt;button type="submit"&gt;Send message&lt;/button&gt;
+&lt;/form&gt;</code></pre></section>
+      <footer class="page-footer"><p>Exercise 12 of 15 · <a href="ex11.html">← Previous</a> · <a href="ex13.html">Next: Responsive table →</a></p></footer>
+    </article>
+  </main>
+  <footer class="site-footer"><p>Week 3 CSS Practice · Alisher Tursunbekov</p><a href="../index.html">Home</a></footer>
+</body>
+</html>

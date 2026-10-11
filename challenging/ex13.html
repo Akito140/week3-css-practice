@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exercise 13: mark up data with an accessible table and allow horizontal scrolling on narrow screens.">
+  <title>Exercise 13: Responsive Table | Week 3 CSS Practice</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="site-mark" href="../index.html">W3<span>.</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../index.html#beginner">Beginner</a><a href="../index.html#intermediate">Intermediate</a><a href="../index.html#challenging">Challenging</a></nav></div></header>
+  <main id="main-content">
+    <header class="page-heading"><a class="back-link" href="../index.html#challenging">← All challenging exercises</a><p class="eyebrow">Challenging · Exercise 13</p><h1>Responsive table</h1><p>A data table uses a caption and scoped column headers to preserve relationships. Its wrapper provides horizontal scrolling on narrow screens without breaking the table structure.</p></header>
+    <article class="exercise-article" aria-labelledby="result-title">
+      <section aria-labelledby="result-title"><h2 id="result-title">Live result</h2><div class="demo-panel"><div class="ex13-table-wrap"><table class="ex13-table"><caption>Weekly practice plan</caption><thead><tr><th scope="col">Day</th><th scope="col">Topic</th><th scope="col">Time</th></tr></thead><tbody><tr><th scope="row">Monday</th><td>Selectors</td><td>30 min</td></tr><tr><th scope="row">Wednesday</th><td>Flexbox</td><td>45 min</td></tr><tr><th scope="row">Friday</th><td>Responsive layout</td><td>40 min</td></tr></tbody></table></div></div></section>
+      <section aria-labelledby="code-title"><h2 id="code-title">Solution markup</h2><pre class="code-panel"><code>&lt;div class="ex13-table-wrap"&gt;
+  &lt;table class="ex13-table"&gt;
+    &lt;caption&gt;Weekly practice plan&lt;/caption&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;&lt;th scope="col"&gt;Day&lt;/th&gt;&lt;th scope="col"&gt;Topic&lt;/th&gt;&lt;th scope="col"&gt;Time&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;&lt;tr&gt;&lt;th scope="row"&gt;Monday&lt;/th&gt;&lt;td&gt;Selectors&lt;/td&gt;&lt;td&gt;30 min&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre></section>
+      <footer class="page-footer"><p>Exercise 13 of 15 · <a href="ex12.html">← Previous</a> · <a href="ex14.html">Next: CSS variables →</a></p></footer>
+    </article>
+  </main>
+  <footer class="site-footer"><p>Week 3 CSS Practice · Alisher Tursunbekov</p><a href="../index.html">Home</a></footer>
+</body>
+</html>

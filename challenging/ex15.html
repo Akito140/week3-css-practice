@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exercise 15: combine CSS Grid, Flexbox, custom spacing, and responsive rules in a profile layout.">
+  <title>Exercise 15: Profile Layout | Week 3 CSS Practice</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="site-mark" href="../index.html">W3<span>.</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../index.html#beginner">Beginner</a><a href="../index.html#intermediate">Intermediate</a><a href="../index.html#challenging">Challenging</a></nav></div></header>
+  <main id="main-content">
+    <header class="page-heading"><a class="back-link" href="../index.html#challenging">← All challenging exercises</a><p class="eyebrow">Challenging · Exercise 15</p><h1>Profile layout</h1><p>Bring together Grid for the main composition, Flexbox for skill tags, and responsive rules for small screens. This compact profile card uses a text-based avatar, so no image needs alternative text.</p></header>
+    <article class="exercise-article" aria-labelledby="result-title">
+      <section aria-labelledby="result-title"><h2 id="result-title">Live result</h2><div class="demo-panel"><article class="ex15-profile"><section class="ex15-identity" aria-labelledby="profile-name"><div class="ex15-avatar" aria-hidden="true">AT</div><h3 id="profile-name">Alisher Tursunbekov</h3><p>Software Engineering student</p></section><section class="ex15-bio" aria-labelledby="profile-about"><h3 id="profile-about">A little about me</h3><p>I enjoy game development, volleyball, and learning Japanese. I like turning new ideas into small projects and learning from each iteration.</p><ul class="ex15-tags" aria-label="Interests"><li>Game development</li><li>Volleyball</li><li>Japanese</li></ul></section></article></div></section>
+      <section aria-labelledby="code-title"><h2 id="code-title">Solution markup</h2><pre class="code-panel"><code>&lt;article class="ex15-profile"&gt;
+  &lt;section class="ex15-identity"&gt;
+    &lt;div class="ex15-avatar" aria-hidden="true"&gt;AT&lt;/div&gt;
+    &lt;h3&gt;Alisher Tursunbekov&lt;/h3&gt;
+    &lt;p&gt;Software Engineering student&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section class="ex15-bio"&gt;
+    &lt;h3&gt;A little about me&lt;/h3&gt;
+    &lt;p&gt;I enjoy game development, volleyball, and learning Japanese.&lt;/p&gt;
+    &lt;ul class="ex15-tags"&gt;...&lt;/ul&gt;
+  &lt;/section&gt;
+&lt;/article&gt;</code></pre></section>
+      <footer class="page-footer"><p>Exercise 15 of 15 · <a href="ex14.html">← Previous</a> · <a href="../index.html">Back to home →</a></p></footer>
+    </article>
+  </main>
+  <footer class="site-footer"><p>Week 3 CSS Practice · Alisher Tursunbekov</p><a href="../index.html">Home</a></footer>
+</body>
+</html>
