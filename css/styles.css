@@ -1,0 +1,225 @@
+/* ---- Site foundations ---- */
+:root {
+  color-scheme: light dark;
+  --ink: #172b2a;
+  --muted: #526462;
+  --paper: #f6f7f2;
+  --surface: #fffefa;
+  --line: #d8dfd7;
+  --green: #176b55;
+  --green-dark: #0c4d3d;
+  --lime: #e0f078;
+  --coral: #a64630;
+  --focus: #b54424;
+  --action-bg: #0c4d3d;
+  --action-text: #ffffff;
+  --shadow: 0 12px 32px rgb(23 43 42 / 7%);
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { min-width: 320px; margin: 0; line-height: 1.6; }
+a { color: var(--green-dark); text-underline-offset: .2em; }
+a:hover { color: var(--coral); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+img { max-width: 100%; height: auto; }
+button, input, textarea { font: inherit; }
+::selection { color: var(--ink); background: var(--lime); }
+
+.skip-link { position: fixed; z-index: 10; top: .75rem; left: .75rem; padding: .65rem 1rem; transform: translateY(-180%); background: var(--surface); border: 2px solid var(--green); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { border-bottom: 1px solid var(--line); background: var(--surface); }
+.header-inner, .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.header-inner { width: min(1120px, calc(100% - 3rem)); min-height: 72px; margin: auto; }
+.site-mark { color: var(--ink); font-size: 1.35rem; font-weight: 850; letter-spacing: .02em; text-decoration: none; }
+.site-mark span { color: var(--coral); }
+.site-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.site-nav a { padding: .35rem 0; font-size: .9rem; font-weight: 650; text-decoration: none; }
+
+main { width: min(1120px, calc(100% - 3rem)); margin: 0 auto; }
+.intro { position: relative; overflow: hidden; padding: clamp(3.5rem, 9vw, 7rem) 0 3.5rem; border-bottom: 1px solid var(--line); }
+.intro::after { position: absolute; right: 2%; bottom: 2.5rem; width: clamp(7rem, 20vw, 15rem); aspect-ratio: 1; border: 1px solid #b5c67b; border-radius: 50%; box-shadow: 0 0 0 1.5rem var(--paper), 0 0 0 1.6rem #b5c67b, 0 0 0 3rem var(--paper), 0 0 0 3.1rem #b5c67b; content: ""; opacity: .8; pointer-events: none; }
+.eyebrow { margin: 0 0 .8rem; color: var(--coral); font-size: .76rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { max-width: 760px; margin-bottom: .5rem; font-size: clamp(2.7rem, 7vw, 5.8rem); line-height: 1.02; letter-spacing: -.035em; }
+h1 span { color: var(--green); }
+.student-name { margin-bottom: .8rem; font-size: 1.25rem; font-weight: 700; }
+.intro-copy { max-width: 600px; margin-bottom: 1.25rem; color: var(--muted); }
+.text-link { position: relative; z-index: 1; display: inline-block; padding: .5rem 0; font-weight: 750; }
+.intro-stats { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 2rem; margin: 2.75rem 0 0; padding: 0; list-style: none; }
+.intro-stats li { display: grid; gap: .1rem; }
+.intro-stats strong { font-size: 1.35rem; line-height: 1.2; }
+.intro-stats span { color: var(--muted); font-size: .82rem; }
+
+.exercise-group { padding: 3.5rem 0; border-bottom: 1px solid var(--line); scroll-margin-top: 1.5rem; }
+.group-heading { display: grid; grid-template-columns: minmax(130px, .55fr) 1fr 1.4fr; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; }
+.group-heading .eyebrow { margin: 0; }
+.group-heading h2 { margin: 0; font-size: 1.7rem; }
+.group-heading > p:last-child { max-width: 380px; margin: 0; color: var(--muted); font-size: .92rem; }
+.exercise-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.exercise-card { display: flex; min-height: 200px; flex-direction: column; align-items: flex-start; padding: 1.25rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
+.exercise-number { margin-bottom: .7rem; color: var(--coral); font-size: .75rem; font-weight: 800; }
+.exercise-card h3 { margin-bottom: .35rem; font-size: 1.05rem; }
+.exercise-card p { margin-bottom: 1rem; color: var(--muted); font-size: .88rem; }
+.exercise-card a { margin-top: auto; font-size: .88rem; font-weight: 750; }
+.site-footer { width: min(1120px, calc(100% - 3rem)); min-height: 88px; margin: auto; color: var(--muted); font-size: .86rem; }
+.site-footer p { margin: 0; }
+.site-footer a { font-weight: 650; }
+
+/* ---- Exercise page shell ---- */
+.page-heading { padding: 3rem 0 1.5rem; border-bottom: 1px solid var(--line); }
+.page-heading h1 { font-size: clamp(2.25rem, 5vw, 4rem); }
+.page-heading > p:last-child { max-width: 650px; color: var(--muted); }
+.back-link { display: inline-block; margin-bottom: 1.25rem; font-size: .88rem; font-weight: 700; }
+.exercise-article { padding: 2rem 0 4rem; }
+.exercise-article h2 { margin-bottom: .65rem; font-size: 1.3rem; }
+.demo-panel { padding: clamp(1.1rem, 3vw, 2rem); border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+.demo-label { margin-bottom: 1rem; color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.code-panel { overflow-x: auto; padding: 1.25rem; border: 1px solid var(--line); background: #e9eee8; color: #19302d; font-size: .85rem; line-height: 1.6; tab-size: 2; }
+.code-panel code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; white-space: pre; }
+.page-footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+.page-footer p { margin: 0; }
+
+/* ---- Exercise 1: Type and color ---- */
+.ex1-sample { max-width: 600px; padding: 1.5rem; border-left: 5px solid var(--green); background: #eef3e7; }
+.ex1-sample h3 { margin-bottom: .45rem; color: var(--green-dark); font-size: 1.65rem; }
+.ex1-sample p { max-width: 48ch; margin-bottom: 0; color: #394f49; }
+
+/* ---- Exercise 2: Box model ---- */
+.ex2-box { width: min(100%, 340px); margin: 1rem auto; padding: 1.25rem; border: 5px solid var(--green); background: var(--lime); }
+.ex2-box p { margin: 0; }
+
+/* ---- Exercise 3: Selectors and cascade ---- */
+.ex3-sample { display: grid; gap: .6rem; }
+.ex3-sample p { margin: 0; padding: .65rem .8rem; border-left: 3px solid var(--line); background: var(--paper); }
+.ex3-sample .ex3-featured { border-color: var(--green); font-weight: 750; }
+#ex3-note { color: var(--coral); }
+
+/* ---- Exercise 4: Surfaces and borders ---- */
+.ex4-note { max-width: 520px; padding: 1.4rem; border: 1px solid #aac6a6; border-radius: 10px; background: #eaf3e7; }
+.ex4-note h3 { margin-bottom: .4rem; }
+.ex4-note p { margin: 0; color: #394f49; }
+
+/* ---- Exercise 5: Links and buttons ---- */
+.ex5-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.ex5-button { display: inline-block; padding: .65rem 1rem; border: 2px solid var(--action-bg); border-radius: 4px; background: var(--action-bg); color: var(--action-text); font-weight: 750; text-decoration: none; }
+.ex5-button:hover { background: var(--coral); border-color: var(--coral); color: var(--ink); }
+.ex5-button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+/* ---- Exercise 6: Display modes ---- */
+.ex6-sample { display: grid; gap: .75rem; }
+.ex6-block, .ex6-inline, .ex6-inline-block { padding: .45rem .65rem; background: #e0f078; }
+.ex6-block { display: block; }
+.ex6-inline { display: inline; }
+.ex6-inline-block { display: inline-block; margin-top: .6rem; }
+
+/* ---- Exercise 7: Flexbox cards ---- */
+.ex7-row { display: flex; flex-wrap: wrap; gap: .8rem; }
+.ex7-card { flex: 1 1 150px; padding: 1rem; border: 1px solid var(--line); background: var(--paper); }
+.ex7-card h3 { margin-bottom: .35rem; font-size: 1rem; }
+.ex7-card p { margin: 0; color: var(--muted); font-size: .88rem; }
+
+/* ---- Exercise 8: Flexible navigation ---- */
+.ex8-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; padding: .85rem 1rem; background: var(--green-dark); }
+.ex8-nav a { padding: .25rem; color: white; font-weight: 700; text-decoration: none; }
+.ex8-nav a:hover { color: var(--lime); }
+
+/* ---- Exercise 9: CSS Grid ---- */
+.ex9-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr)); gap: .75rem; }
+.ex9-tile { display: grid; min-height: 92px; place-items: center; border: 1px solid var(--line); background: #eaf3e7; font-weight: 750; }
+
+/* ---- Exercise 10: Responsive columns ---- */
+.ex10-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 1rem; }
+.ex10-layout > * { padding: 1rem; background: #eaf3e7; }
+.ex10-layout h3 { margin-bottom: .4rem; }
+.ex10-layout p { margin: 0; color: #394f49; }
+
+/* ---- Exercise 11: Pseudo-elements ---- */
+.ex11-list { display: grid; gap: .7rem; margin: 0; padding: 0; list-style: none; }
+.ex11-list li { display: flex; align-items: baseline; gap: .55rem; }
+.ex11-list li::before { color: var(--coral); font-weight: 900; content: "✓"; }
+.ex11-quote { margin: 1.25rem 0 0; padding-left: 1rem; border-left: 3px solid var(--green); color: var(--muted); }
+
+/* ---- Exercise 12: Accessible form ---- */
+.ex12-form { display: grid; max-width: 440px; gap: 1rem; }
+.ex12-form label { display: block; margin-bottom: .3rem; font-size: .9rem; font-weight: 750; }
+.ex12-form input, .ex12-form textarea { width: 100%; padding: .65rem .75rem; border: 1px solid #768782; border-radius: 3px; background: var(--surface); color: var(--ink); }
+.ex12-form textarea { min-height: 90px; resize: vertical; }
+.ex12-form button { justify-self: start; padding: .6rem 1rem; border: 2px solid var(--action-bg); border-radius: 3px; background: var(--action-bg); color: var(--action-text); font-weight: 750; cursor: pointer; }
+.ex12-form button:hover { background: var(--coral); border-color: var(--coral); color: var(--ink); }
+
+/* ---- Exercise 13: Responsive table ---- */
+.ex13-table-wrap { overflow-x: auto; }
+.ex13-table { width: 100%; border-collapse: collapse; text-align: left; }
+.ex13-table caption { padding: 0 0 .7rem; text-align: left; font-weight: 750; }
+.ex13-table th, .ex13-table td { padding: .65rem .8rem; border-bottom: 1px solid var(--line); }
+.ex13-table thead { background: var(--green-dark); color: white; }
+.ex13-table tbody tr:nth-child(even) { background: var(--paper); }
+
+/* ---- Exercise 14: CSS custom properties ---- */
+.ex14-card { --card-accent: #176b55; --card-surface: #eaf3e7; max-width: 440px; padding: 1.3rem; border-top: 5px solid var(--card-accent); background: var(--card-surface); }
+.ex14-card h3 { margin-bottom: .4rem; color: var(--card-accent); }
+.ex14-card p { margin: 0; color: var(--ink); }
+
+/* ---- Exercise 15: Composed profile layout ---- */
+.ex15-profile { display: grid; grid-template-columns: minmax(160px, .7fr) 1.6fr; gap: 1.5rem; align-items: start; }
+.ex15-identity { padding: 1.2rem; background: #eaf3e7; text-align: center; }
+.ex15-avatar { display: grid; width: 88px; aspect-ratio: 1; place-items: center; margin: 0 auto 1rem; border-radius: 50%; background: var(--green-dark); color: white; font-size: 1.4rem; font-weight: 800; }
+.ex15-identity h3 { margin-bottom: .2rem; }
+.ex15-identity p, .ex15-bio p { margin: 0; color: var(--muted); }
+.ex15-bio { display: grid; gap: 1rem; }
+.ex15-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.ex15-tags li { padding: .25rem .6rem; border: 1px solid #82978d; border-radius: 999px; font-size: .82rem; font-weight: 650; }
+
+/* ---- Dark mode ---- */
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #edf3eb; --muted: #bdc9c2; --paper: #17211f; --surface: #202c29; --line: #3c4b46; --green: #86c8a4; --green-dark: #b0e2c2; --coral: #ffad91; --focus: #ffc273; --action-bg: #0d3d31; --action-text: #ffffff; --shadow: 0 12px 32px rgb(0 0 0 / 20%); }
+  a { color: #c0efd1; }
+  .site-mark { color: var(--ink); }
+  .site-nav a, .site-footer a, .exercise-card a, .text-link, .back-link { color: #c0efd1; }
+  .intro::after { border-color: #748d60; box-shadow: 0 0 0 1.5rem var(--paper), 0 0 0 1.6rem #748d60, 0 0 0 3rem var(--paper), 0 0 0 3.1rem #748d60; }
+  .ex1-sample, .ex4-note, .ex9-tile, .ex10-layout > *, .ex14-card, .ex15-identity { background: #293b34; }
+  .ex1-sample h3, .ex4-note p, .ex10-layout p { color: #d7e6dc; }
+  .ex2-box, .ex6-block, .ex6-inline, .ex6-inline-block { color: #17211f; }
+  .ex8-nav { background: #0d3d31; }
+  .code-panel { background: #111a18; color: #e2eee6; }
+  .ex12-form input, .ex12-form textarea { border-color: #81948a; }
+  .ex13-table thead { background: #0d3d31; }
+  .ex14-card p { color: var(--ink); }
+  .ex15-avatar { background: #0d3d31; }
+}
+
+/* ---- Small screens ---- */
+@media (max-width: 700px) {
+  .header-inner, .site-footer, main { width: min(100% - 2rem, 1120px); }
+  .header-inner { align-items: flex-start; padding: .8rem 0; }
+  .site-nav { justify-content: flex-end; gap: .35rem .8rem; }
+  .site-nav a { font-size: .82rem; }
+  .intro { padding-top: 3.5rem; }
+  .intro::after { right: -3rem; bottom: 1.5rem; opacity: .45; }
+  .intro-copy { position: relative; z-index: 1; }
+  .group-heading { grid-template-columns: 1fr auto; gap: .2rem 1rem; }
+  .group-heading .eyebrow { grid-column: 1 / -1; }
+  .group-heading > p:last-child { grid-column: 1 / -1; }
+  .exercise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .exercise-card { min-height: 190px; padding: 1rem; }
+  .ex10-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 420px) {
+  .header-inner { flex-direction: column; gap: .25rem; }
+  .site-nav { justify-content: flex-start; }
+  .exercise-grid { grid-template-columns: 1fr; }
+  .exercise-card { min-height: 0; }
+  .intro-stats { gap: 1.25rem; }
+  .site-footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: .25rem; padding: 1rem 0; }
+  .ex15-profile { grid-template-columns: 1fr; }
+}
