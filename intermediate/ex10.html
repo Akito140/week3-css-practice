@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exercise 10: change a two-column CSS Grid layout into a single column at a mobile breakpoint.">
+  <title>Exercise 10: Responsive Layout | Week 3 CSS Practice</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="site-mark" href="../index.html">W3<span>.</span></a><nav class="site-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../index.html#beginner">Beginner</a><a href="../index.html#intermediate">Intermediate</a><a href="../index.html#challenging">Challenging</a></nav></div></header>
+  <main id="main-content">
+    <header class="page-heading"><a class="back-link" href="../index.html#intermediate">← All intermediate exercises</a><p class="eyebrow">Intermediate · Exercise 10</p><h1>Responsive layout</h1><p>A two-column Grid is useful when space allows. At the small-screen breakpoint in the shared stylesheet, it becomes one column so neither region is squeezed.</p></header>
+    <article class="exercise-article" aria-labelledby="result-title">
+      <section aria-labelledby="result-title"><h2 id="result-title">Live result</h2><div class="demo-panel"><p class="demo-label">Resize the viewport to test the column change</p><div class="ex10-layout"><section aria-labelledby="ex10-main-title"><h3 id="ex10-main-title">Main story</h3><p>The main content receives more room on wide screens and naturally fills the row on narrow screens.</p></section><aside aria-labelledby="ex10-aside-title"><h3 id="ex10-aside-title">Side note</h3><p>Supporting content stays beside the story only while there is space.</p></aside></div></div></section>
+      <section aria-labelledby="code-title"><h2 id="code-title">Solution markup</h2><pre class="code-panel"><code>&lt;div class="ex10-layout"&gt;
+  &lt;section aria-labelledby="story-title"&gt;
+    &lt;h3 id="story-title"&gt;Main story&lt;/h3&gt;
+    &lt;p&gt;The main content receives more room.&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;aside aria-labelledby="note-title"&gt;
+    &lt;h3 id="note-title"&gt;Side note&lt;/h3&gt;
+    &lt;p&gt;Supporting content sits beside the story.&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/div&gt;</code></pre></section>
+      <footer class="page-footer"><p>Exercise 10 of 15 · <a href="ex9.html">← Previous</a> · <a href="../challenging/ex11.html">Next: Pseudo-elements →</a></p></footer>
+    </article>
+  </main>
+  <footer class="site-footer"><p>Week 3 CSS Practice · Alisher Tursunbekov</p><a href="../index.html">Home</a></footer>
+</body>
+</html>
