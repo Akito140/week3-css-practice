@@ -303,7 +303,7 @@ h1 span { color: #ffd2dc; }
 .code-panel { border-radius: .5rem; }
 
 .entrance-splash { position: fixed; z-index: 30; inset: 0; overflow: hidden; background: transparent; pointer-events: none; }
-.splash-ball { position: absolute; top: 50%; left: 50%; width: clamp(4.5rem, 12vw, 8rem); overflow: visible; filter: drop-shadow(0 14px 20px rgb(0 0 0 / 30%)); animation: volleyball-flight 1.5s cubic-bezier(.2, .72, .25, 1) both; }
+.splash-ball { position: absolute; top: 50%; left: 50%; width: clamp(4.5rem, 12vw, 8rem); aspect-ratio: 1; overflow: visible; border-radius: 50%; filter: drop-shadow(0 14px 20px rgb(0 0 0 / 30%)); animation: volleyball-flight 1.5s cubic-bezier(.2, .72, .25, 1) both; }
 .splash-petal { --petal-x: -42vw; --petal-y: -28vh; --petal-spin: -560deg; --petal-delay: 0ms; position: absolute; top: 50%; left: 50%; width: 1.15rem; height: 1.7rem; border-radius: 68% 10% 68% 10%; background: linear-gradient(145deg, #fff6f1 0%, #ffcedb 48%, #ed91ad 100%); opacity: 0; box-shadow: 0 2px 8px rgb(107 32 59 / 18%); animation: petal-flight 1.35s cubic-bezier(.14, .74, .27, 1) calc(1.02s + var(--petal-delay)) both; }
 .splash-petal:nth-of-type(2) { --petal-x: -42vw; --petal-y: -28vh; --petal-spin: -560deg; --petal-delay: 0ms; }
 .splash-petal:nth-of-type(1) { --petal-x: 38vw; --petal-y: -36vh; --petal-spin: 720deg; --petal-delay: 40ms; }
